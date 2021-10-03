@@ -20,7 +20,7 @@ stream = p.open(format=FORMAT,
                 frames_per_buffer=CHUNK)
 
 while True:
-    data, addr = sock.recvfrom(1024)
+    data, addr = sock.recvfrom(8*1024)
     stream.write(data)
 
 
